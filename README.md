@@ -1,3 +1,9 @@
+# 前排提醒
+
+如果访问慢的同学可以去[这个网站](https://1.1.1.1)下载软件
+
+能正常访问[测试网站](https://www.youtube.com)即算成功
+
 # C++公益优化项目（请自取）
 
 1、火车头（感谢：胥寻之）
@@ -77,6 +83,16 @@ using csl = const ll;
 #define mst0(s) memset(s, 0, sizeof s)
 #define mstinf(s) memset(s, 0x3f, sizeof s)
 #define lowbit(u) ((u) & -(u))
+```
+
+3、`cin`&`cout`优化（不影响调试）
+
+```cpp
+#ifdef ONLINE_JUDGE
+	ios::sync_with_stdio(false);
+	cin.tie(0);
+	cout.tie(0);
+#endif
 ```
 
 <hr>
