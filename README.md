@@ -1,4 +1,7 @@
-公益火车头，请大家自取！
+# C++公益优化项目（请自取）
+
+1、火车头（感谢：胥寻之）
+
 （慎用，只有在Win中有效，例如Hydrojudge，LG过不了）
 
 ```cpp
@@ -46,6 +49,34 @@
 #pragma GCC optimize("-fexpensive-optimizations")
 #pragma GCC optimize("inline-functions-called-once")
 #pragma GCC optimize("-fdelete-null-pointer-checks")
+```
+
+2、数据类型定义（感谢：孙言龙）
+
+```cpp
+using ll = long long;
+using ull = unsigned ll;
+using ld = long double;
+using mii = map<int, int>;
+using mll = map<ll, ll>;
+using mib = map<int, bool>;
+using mlb = map<ll, bool>;
+using si = set<int>;
+using sl = set<ll>;
+using pii = pair<int, int>;
+using pll = pair<ll, ll>;
+using pci = pair<char, int>;
+using pic = pair<int, char>;
+using csi = const int;
+using csl = const ll;
+#define vct vector
+#define mkp make_pair
+#define fir first
+#define sec second
+#define vct vector
+#define mst0(s) memset(s, 0, sizeof s)
+#define mstinf(s) memset(s, 0x3f, sizeof s)
+#define lowbit(u) ((u) & -(u))
 ```
 
 <hr>
