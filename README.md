@@ -97,7 +97,7 @@ using csl = const ll;
 
 <hr>
 
-三体笑话已转移
+[三体笑话已转移](https://matthew101130.github.io/three-body/)
 
 <hr>
 
