@@ -60,21 +60,23 @@
 2、数据类型定义（感谢：孙言龙）
 
 ```cpp
-using ll = long long;
-using ull = unsigned ll;
-using ld = long double;
-using mii = map<int, int>;
-using mll = map<ll, ll>;
-using mib = map<int, bool>;
-using mlb = map<ll, bool>;
-using si = set<int>;
-using sl = set<ll>;
-using pii = pair<int, int>;
-using pll = pair<ll, ll>;
-using pci = pair<char, int>;
-using pic = pair<int, char>;
-using csi = const int;
-using csl = const ll;
+#define ll long long
+#define ull unsigned ll
+#define ld long double
+#define mii map<int, int>
+#define mll map<ll, ll>
+#define mib map<int, bool>
+#define mlb map<ll, bool>
+#define mis map<int, string>
+#define msi map<string, int>
+#define si set<int>
+#define sl set<ll>
+#define pii pair<int, int>
+#define pll pair<ll, ll>
+#define psi pair<string, int>
+#define pis pair<int, string>
+#define csi const int
+#define csl const ll
 #define vct vector
 #define mkp make_pair
 #define fir first
@@ -82,6 +84,7 @@ using csl = const ll;
 #define vct vector
 #define mst0(s) memset(s, 0, sizeof s)
 #define mstinf(s) memset(s, 0x3f, sizeof s)
+#define mstfinf(s) memset(s, 0xC0, sizeof s)
 #define lowbit(u) ((u) & -(u))
 ```
 
@@ -97,7 +100,7 @@ using csl = const ll;
 
 <hr>
 
-[三体笑话已转移](https://matthew101130.github.io/three-body/)
+[三体笑话已转移](https://matthew101130.github.io/three-body-jokes/)
 
 <hr>
 
