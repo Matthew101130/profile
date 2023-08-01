@@ -88,15 +88,59 @@
 #define lowbit(u) ((u) & -(u))
 ```
 
-3、`cin`&`cout`优化（不影响调试）
+3、自己手写的堆模板
 
 ```cpp
-#ifdef ONLINE_JUDGE
-	ios::sync_with_stdio(false);
-	cin.tie(0);
-	cout.tie(0);
-#endif
+template <typename T>
+struct Heap {
+	vector<T> a;
+	function<bool (T, T)> cmp;
+	Heap(function<bool (T, T)> _c = [](T a, T b){ return a < b; }): cmp(_c) {
+		a.resize(1);
+	}
+	inline auto size() {
+		return a.size() - 1;
+	}
+	inline bool empty() {
+		return size() == 0;
+	}
+	void push_up(int cur) {
+		int nxt = cur >> 1;
+		T dat = a[cur];
+		while (nxt >= 1) {
+			if (!cmp(a[nxt], dat)) break;
+			a[cur] = a[nxt], cur = nxt, nxt >>= 1;
+		}
+		a[cur] = dat;
+	}
+	void push_down(int cur) {
+		int nxt = cur << 1;
+		T dat = a[cur];
+		while (nxt <= size()) {
+			if (nxt < size() && cmp(a[nxt], a[nxt + 1])) ++nxt;
+			if (!cmp(dat, a[nxt])) break;
+			a[cur] = a[nxt], cur = nxt, nxt <<= 1;
+		}
+		a[cur] = dat;
+	}
+	void push(T dat) {
+		a.push_back(dat);
+		push_up(size());
+	}
+	T top() {
+		return a[1];
+	}
+	T pop() {
+		T ret = a[1];
+		swap(a[1], a[size()]);
+		a.erase(a.begin() + size());
+		push_down(1);
+		return ret;
+	}
+};
 ```
+
+说明：性质与`priority_queue`相似，小根堆传大于号，大根堆传小于号，使用`vector`存储，默认大根堆
 
 <hr>
 
